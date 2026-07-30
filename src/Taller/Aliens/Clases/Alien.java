@@ -77,7 +77,7 @@ public class Alien {
 		System.out.println("[#] pies:        " + numeroPies);
 		System.out.println("[$] extremidad:  " + precioExtremidad);
 		System.out.println("[$] ojo:         " + precioOjo);
-		System.out.println("[$] cuerpo:        " + precioCuerpo);
+		System.out.println("[$] cuerpo:        " + precioCuerpo + "\n");
 	}
 
 	
