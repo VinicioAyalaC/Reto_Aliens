@@ -48,6 +48,38 @@ public class Alien {
 
 	
 
+	// get & set
+	public int getTamanio() {	return tamanio;	}
+
+	public String getColor() {	return color;	}
+
+	public int getNumeroOjos() {	return numeroOjos;	}
+
+	public int getNumeroBrazos() {	return numeroBrazos;	}
+
+	public int getNumeroPies() {	return numeroPies;	}
+
+	public double getPrecioExtremidad() {	return precioExtremidad;	}
+
+	public double getPrecioOjo() {	return precioOjo;	}
+
+	public double getPrecioCuerpo() {	return precioCuerpo;	}
+	
+
+	
+	
+	// metodos basicos
+	public void imprimir() {
+		System.out.println("Tamaño:          " + tamanio);
+		System.out.println("Color:           " + color);
+		System.out.println("[#] ojos:        " + numeroOjos);
+		System.out.println("[#] brazos:      " + numeroBrazos);
+		System.out.println("[#] pies:        " + numeroPies);
+		System.out.println("[$] extremidad:  " + precioExtremidad);
+		System.out.println("[$] ojo:         " + precioOjo);
+		System.out.println("[$] cuerpo:        " + precioCuerpo);
+	}
+
 	
 	
 	
