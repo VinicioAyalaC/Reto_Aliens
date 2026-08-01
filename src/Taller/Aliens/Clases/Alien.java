@@ -82,12 +82,13 @@ public class Alien {
 	public void imprimir() {
 		System.out.println("Tamaño:          " + tamanio);
 		System.out.println("Color:           " + color);
-		System.out.println("[#] ojos:        " + numeroOjos);
-		System.out.println("[#] brazos:      " + numeroBrazos);
-		System.out.println("[#] pies:        " + numeroPies);
-		System.out.println("[$] extremidad:  " + precioExtremidad);
-		System.out.println("[$] ojo:         " + precioOjo);
-		System.out.println("[$] cuerpo:      " + precioCuerpo + "\n");
+		System.out.println("[#] Ojos:        " + numeroOjos);
+		System.out.println("[#] Brazos:      " + numeroBrazos);
+		System.out.println("[#] Pies:        " + numeroPies);
+		System.out.println("[$] Extremidad:  " + precioExtremidad);
+		System.out.println("[$] Ojo:         " + precioOjo);
+		System.out.println("[$] Cuerpo:      " + precioCuerpo);
+		System.out.println("[$] Total:      " + precioTotal + "\n");
 	}
 	
 	
