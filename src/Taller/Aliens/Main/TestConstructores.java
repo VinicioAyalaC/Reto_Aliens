@@ -21,6 +21,18 @@ public class TestConstructores {
 		alien3.imprimir();	
 		
 		
+		
+		// prueba 2:  agregar Extremidades
+		System.out.println("---  TEST 4: MAYOR AL MAXIMO ---");
+		Alien alien4 = new Alien(55, "negro" );
+			boolean brazos = alien4.agregarBrazos(5);
+			boolean piernas = alien4.agregarPiernas(4);
+			System.out.println("Los brazos se agregaron correctamente?  :  "+brazos);
+			System.out.println("Las piernas se agregaron correctamente? :  "+piernas);		
+			alien4.imprimir();	
+		
+		
+		
 	}// main
 
 }// class

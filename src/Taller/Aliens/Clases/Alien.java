@@ -22,6 +22,9 @@ public class Alien {
 	private static final double PORCENTAJEOJOS = 0.05;	
 	
 	
+	// Atributos extremidades
+	private static final int MAXIMOEXTREMIDADES = 10;
+	
 	
 	
 	// constructores
@@ -77,8 +80,40 @@ public class Alien {
 		System.out.println("[#] pies:        " + numeroPies);
 		System.out.println("[$] extremidad:  " + precioExtremidad);
 		System.out.println("[$] ojo:         " + precioOjo);
-		System.out.println("[$] cuerpo:        " + precioCuerpo + "\n");
+		System.out.println("[$] cuerpo:      " + precioCuerpo + "\n");
 	}
+	
+	
+	
+	// Parte 7: Extremidades
+	public boolean agregarBrazos(int cantidadBrazos) {
+		
+		int totalExtremidades = this.numeroBrazos + this.numeroPies + cantidadBrazos;
+		
+		if( totalExtremidades>=0 && totalExtremidades <= MAXIMOEXTREMIDADES ) {
+			numeroBrazos+=cantidadBrazos;			
+			return true;
+
+		} else {	return false;		}
+		
+	}//
+	
+		
+	public boolean agregarPiernas(int cantidadPiernas) {
+		
+		int totalExtremidades = this.numeroBrazos + this.numeroPies + cantidadPiernas;
+		
+		if( totalExtremidades>=0 && totalExtremidades <= MAXIMOEXTREMIDADES ) {
+			numeroPies+=cantidadPiernas;			
+			return true;
+
+		} else {	return false;		}	
+	
+	}//
+	
+	
+	
+	
 
 	
 	
