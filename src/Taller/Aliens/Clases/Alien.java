@@ -13,6 +13,8 @@ public class Alien {
 	private double precioOjo;
 	private double precioCuerpo;
 	
+	private double precioTotal;
+	
 	
 	// Atributos estáticos
 	private static final int 	TAMANIOMINIMO = 5;
@@ -42,6 +44,7 @@ public class Alien {
 		this.numeroOjos   = 0;
 		this.numeroBrazos = 0;
 		this.numeroPies   = 0;
+		this.precioTotal = 0;
 		
 		this.precioCuerpo = this.tamanio * PORCENTAJECUERPO;
 		this.precioExtremidad = this.tamanio * PORCENTAJEEXTREMIDAD;
@@ -68,6 +71,10 @@ public class Alien {
 
 	public double getPrecioCuerpo() {	return precioCuerpo;	}
 	
+	
+	public double getPrecioTotal() {	return precioTotal;	}
+	
+	
 
 	
 	
@@ -91,7 +98,8 @@ public class Alien {
 		int totalExtremidades = this.numeroBrazos + this.numeroPies + cantidadBrazos;
 		
 		if( totalExtremidades>=0 && totalExtremidades <= MAXIMOEXTREMIDADES ) {
-			numeroBrazos+=cantidadBrazos;			
+			numeroBrazos+=cantidadBrazos;	
+			calcularPrecioTotal();
 			return true;
 
 		} else {	return false;		}
@@ -104,7 +112,8 @@ public class Alien {
 		int totalExtremidades = this.numeroBrazos + this.numeroPies + cantidadPiernas;
 		
 		if( totalExtremidades>=0 && totalExtremidades <= MAXIMOEXTREMIDADES ) {
-			numeroPies+=cantidadPiernas;			
+			numeroPies+=cantidadPiernas;
+			calcularPrecioTotal();
 			return true;
 
 		} else {	return false;		}	
@@ -132,11 +141,23 @@ public class Alien {
 			return false;
 		} else {
 			numeroOjos += cantidadOjos;
+			calcularPrecioTotal();
 			return true;
 		}	
 			
 		
 	}//agregarOjos
+	
+	
+	
+	public void calcularPrecioTotal() {
+		
+		int extremidades = this.numeroBrazos + this.numeroPies;
+		
+		precioTotal = this.precioCuerpo + (extremidades * this.precioExtremidad) + (this.numeroOjos * this.precioOjo);
+		
+		
+	}//calcularPrecioTotal
 
 	
 	
